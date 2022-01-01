@@ -1,0 +1,97 @@
+Backend server side amazon -> data, user, auth, APIs FE, BE -  web development
+
+
+FE- visual BE -> logical representation of any system -> storage of data + bringing data when needed
+Websites -> uniform resource locator ->
+
+Application -> url
+Amazon.in
+Amazon.us
+Amazon.uk
+https://in.bookmyshow.com/explore/home/national-capital-region-ncr
+
+bookmyshow - domain () -> 
+in.bookmyshow.com -> hostname
+.com, .org, .edu,  -> type of application
+Key-value
+explore/home/national-capital-region-ncr - > functionality
+Https: -> protocol -> tcp, ump, http -> 
+client  —>  Server of irctc, bookmyshow - ticket booking service
+
+
+
+
+Bookmyshow ->  bookmyshow.geek  1. landing page -> (location specific) -> movies
+2. List of theatre(movie specific)
+3. Availability of seats(theatre specific)
+4. Book ticket(selected seat). -> payments
+5. 
+
+
+
+ncr: [{”movie1”:{“name”:”spiderman”, “duration”:100, }}] 
+Python - Django, flask 
+Why different languages for FE and BE?
+- Supports Multiserver architecture
+- Resource scarcity
+BE languages - > Java, JS
+Springboot, 
+
+Functionalities of JS
+ - single threaded(exception - worker threads)
+
+Java - multithreading
+
+program (hello.java) (psvm(”Hello”)) java hello.java -> process -> runs on a thread -> 0.00002 sec
+
+Program divided into parts -> and divided to different threads
+
+
+
+I/O or CPU intensive
+Which BE - Java springboot or NodeJs
+- Single threaded environment -> no waiting (queue)
+
+NodeJS
+
+
+23456090987654 people -> 234560909876540sms
+Find the sms which might be suspicious - [kill, murder, mystery, treasure]
+
+Protocols -> RPC -> procedural calls -> JSON, XML, thrift -> high performance systems -> locally ->
+Begin
+Send 20 bits
+Send 20 bits
+End
+
+SOAP -> store state, XML, secure()
+
+
+
+IP1 -> IP2
+
+See what info is being sent or received by whom
+
+
+Username =‘kanika’, password = ‘kanika@123’
+2. File -> file.txt (username, password) -> FTP
+3. mail(username, password) -> SMTP
+4. Xml file <?xml version="1.0"?> 15% SOAP
+    1. <catalog>
+    2.    <username id=“1”>
+    3.       <value>kanika</value>
+    4.    </username>
+    5.    <password id=“1”>
+    6.       <value>pass@123</value>
+    7.    </password>
+    8. </catalog> WSDL
+5. HTTP - 83% -> JSON, pdf, file
+
+
+
+
+HW
+1. Try to think of functionalities in a blogging website?
+2. Think of UI functionalities in a messaging application. (Similar to https://socket.io/demos/chat/ ). Think of basic and additional/optional functionalities.
+
+
