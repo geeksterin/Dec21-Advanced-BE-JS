@@ -1,0 +1,108 @@
+
+NodeJSruntime environment for JS
+
+C++[V8 engine] -> NodeJs
+- Single threaded -> JS funcs( console.log, ) ->
+- Asynchronous -> very very fast
+- Highly scalable -> (how much crowd we are expecting, what’s our system capable of doing)
+- I/O intensive 
+
+
+<10-20> , <1000-2000>
+
+Program -Js(async await, callbacks, )function func1() -> https://api.postalpincode.in/postoffice/delhi. -> service not availablefunction func2() -> printing the results. -> undefined
+
+func1()
+func2()
+
+
+Bookmyshow Kanika -> book seat 1
+Vinay -> book seat 2
+
+Paypal -> java -> spring ->NodeJS -> -thrice
+
+
+Server -> computer () <- 300000
+				 computer () <- 300000
+
+
+REST Concepts
+Representational State Transfer
+<Client> <Server > <Data/Information/Resource>
+Data/Information/Resource ->
+
+<request> <response>
+
+
+RequestGET 'https://api.postalpincode.in/postoffice/delhi'
+HTTP method -GET
+
+Request -> {}
+Url, parameters(query, body, ), headers(type of data u want to send)
+
+
+Headers - > (ContentType: Text/Html), Application/File
+
+https://icicinetbanking.com/makePayment (parameters - amount, where to submit that amount), (headers - auth token, expiry, Connection -end) -> debits 10 k
+https://icicinetbanking.com/makePayment (parameters - amount, where to submit that amount), (headers - auth token, expiry, Connection -end) -> debits 10k
+ 
+-> make the payment
+
+HTTP methods - CRUD operations -> GET, POST, PUT, DELETECreate (register) POST
+Read (get all movies/theatres/blogs/articles) GET
+Update PUT
+Delete DELETE
+
+Ticket-available -> unavailable
+
+
+http://127.0.0.1:3000/booking/bookhttp://127.0.0.1:3000/booking/view
+http://127.0.0.1:3000/booking/update
+http://127.0.0.1:3000/booking/delete
+
+http://127.0.0.1:3000/booking   GET, POST, PUT, DELETE
+GET v/s POST
+ -> don’t send anything body ->
+/login?username=Kanika&password=pass@123 (username, password)
+
+FE/admin/login
+/admin/register
+/login
+/register
+
+BE
+https://<host>:<port>/api/v1/booking
+
+
+req.get(‘/api/v1/booking’, req, res ()=>{
+})
+
+https://<host>:<port>/api/v2/booking
+req.get(‘/api/v2/booking’, req, res ()=>{
+})
+
+/api/v1/register
+NodeJs modules -> fs, url, http
+Var fs = require(‘fs’)
+fs.readFile - > sync
+fs.read -> async
+fs.readStream ->
+
+index.html
+Index.js
+Var fs = require(‘fs’)
+fs.readFile(‘./index.html’, (content, error) => {
+		if (error) {
+				console.error(‘error reading the file’)
+		}
+		if (content) {
+			
+		}})
+HW
+
+1.  Register on https://mockapi.io/, and create endpoints for bookmyshow, and try from postman. Send
+
+
+
+
+				
