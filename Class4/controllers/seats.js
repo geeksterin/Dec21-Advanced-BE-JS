@@ -1,0 +1,1 @@
+// list all seats with a theatre id and a show id
