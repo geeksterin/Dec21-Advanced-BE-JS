@@ -1,0 +1,47 @@
+NodeJS Modules
+
+
+Already created Programs
+Separate file
+Functionalities bundled in one
+
+Library vs module vs dependancy vs packages
+
+
+<logging> -> console.log, console.error
+Module -> logging.js -> methods/functions, classes, string, datatype, json
+
+
+Package/Dependancy - > logger. -> multiple modules -> logging.js, error.js, info.js, warning.js
+
+Library -> collection of packages(CommonJS, eg. url, os, fs, http)
+
+Framework -> libraries -> architecture 
+
+
+Nodejs Modules -> core/by default , local, third party
+
+Core Modules -> fs, url, os, path, querystring, http
+User modules <calculator.js> -><taxcalculator.js>
+
+
+Import vs require
+
+
+Debugging in NodeJS
+
+-dry run
+-printing step by step
+Read Errors(which error)
+Check consoles
+Check data
+
+
+Ide, core nodejs debugger, 
+// inspector 6/7 ->
+
+
+
+
+
+
