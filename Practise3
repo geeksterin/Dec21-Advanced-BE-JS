@@ -1,0 +1,131 @@
+Blogging Application
+
+Landing page -> 
+<optional>login (social)-> recent posts/most liked posts
+Categories/tags -> most liked, topics, 
+
+4hundred million blogs every month
+100 million users -> 200
+
+Functional requirement->
+1. User register/ login (POST)
+2. (Get) all blogs(trending top n, tag = ’s’, order_by-> date/time to read, which user, most_upvoted)
+3. Update blog (PUT)
+4. (Delete)
+5. Create blog
+6. Write comment (CRUD comment, post_id, user_id)
+7. Upvote/Like of a post(post_id, user_id)
+8. Tags CRUD
+
+Non-functional requirements->
+1. Highly scalable 
+2. Atomicity -ACID
+3. Adaptable, FE
+
+Additional/Optional requirements
+1. Login through social media
+10, 40
+Fetch post , fetch comment - > O(N)
+Update comment - > O(N)
+Upvote comments
+
+“python” -> blogs  O(1)
+
+User
+id -unique/non-null/empty - primary
+Name
+Username
+Password
+Email
+liked_tags = []
+age
+
+logged_users - auditing -> create > fetch ->O(N^2logN)
+user_id
+active_time
+inactive_at
+system_info
+
+1- 10am- 10:10
+2-10:01-10:18am
+1- 10:12-10:15
+1-10:20- 10:23
+user_id: 2hrs
+2: 3hrs
+3: 1hr
+Last week most active users -> [users]
+
+logged_hours
+user_id
+Minutes
+created_at - > 10:20 2Jan 2022
+Date1, date2
+
+
+Profile
+user_id - foreign key
+Age
+Photo
+Bio
+Experience
+Linkendin
+Followers
+Following
+
+order_by (date, upvotes)
+Activity = upvotes + downvotes + len(comments)
+Post/article/blog  - O(N) *O(N)
+id
+Title
+Body(references)
+created_at
+updated_at
+user_id
+Tags = []
+#Comments = [1,2,3,4]
+#Comments - {comment_1: ‘’, comment_2: ‘’}
+Downvotes = 
+Upvotes = 
+
+
+<60kB> -> 0.05 sec
+<2B> -> 1.2 sec
+
+
+Media - O(1)
+{}
+Id
+type
+post_id
+Data
+
+Linux -> blogging
+Redhat -> db -> server
+
+‘Link1’  -> Dog
+
+Media - cloud service provider 
+{}
+
+Comments -O(1)
+id
+post_1: {comment_1: 
+								{user_id: 1, title: ’t1’, body: ’b1’},
+			comment_2:{user_id:2, title:’’t2’, body: ‘’b2’,, created_at: timestamp},
+
+Tag/Category
+id
+{name :related_posts = [1,2,3,4,5]}
+
+
+Reactions - O(N) * O(1) -> O(N)*O(M), O(1)
+post_id (1)
+Id
+Value = [{u1: “upvoted”}]
+
+
+
+
+
+
+
