@@ -1,4 +1,4 @@
-exports.users = [
+module.exports = [
     {
         "id": 1,
         "username": "user1",
@@ -15,3 +15,9 @@ exports.users = [
         "password": "pass@123",
     }
 ]
+
+// exports.users = {
+//     1: {"username": "user1",
+//     "password": "pass@123",},
+//     2: {}
+// }

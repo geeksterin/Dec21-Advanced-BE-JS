@@ -20,10 +20,9 @@ const routes = require('./routes')
 // }
 // O(N)//O(1)
 
-
 http.createServer((req, res) => {
     console.log(req.url)
-    routes()
+    routes(req, res)
 }).listen($port, () => {
     console.log(`Server listening to http://${$host}:${$port}`)
 })
