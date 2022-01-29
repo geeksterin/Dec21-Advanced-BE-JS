@@ -1,4 +1,5 @@
 var bcrypt = require('bcrypt')
+const { response } = require('express')
 
 async function createUser(user) {
     var password = user.password
@@ -13,9 +14,20 @@ async function getUser(username) {
     return await connection.query(`select * from user where username="${username}"`)
 }
 
+async function authoriseRequest(token) {
+    console.log("token check + "+token+" +++ "+config.get('token_secret'))
+    await jwt.verify(token, config.get('token_secret').toString()).then((if_verfied)=> {
+        return if_verfied
+    }).catch((e)=> {
+        console.log(e)
+        return null
+    })
+}
+
 module.exports = {
     createUser: createUser,
-    getUser: getUser
+    getUser: getUser,
+    authoriseRequest: authoriseRequest
 }
 
 // (str) ->(str)->(str)

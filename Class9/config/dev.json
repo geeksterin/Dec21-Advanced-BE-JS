@@ -1,0 +1,5 @@
+{
+    "host": "localhost",
+    "port": "3001",
+    "token_secret": "ef20300d6189d02615b0f105ffd81685edeb6a335e8bd85d2ca5d0005addb376c0938ae35b7d3c16df019e264ffc660d"
+}

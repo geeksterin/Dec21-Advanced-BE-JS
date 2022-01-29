@@ -1,5 +1,7 @@
 var service = require('./../services/user')
 var bcrypt = require('bcrypt')
+var crypto = require('crypto')
+
 module.exports = {
     helloUser: (req, res) => {
         res.status(200).send("Hey There")
@@ -19,14 +21,21 @@ module.exports = {
         await service.getUser(req.body.username).then(async ([data,fields]) => {
             console.log(data[0].username)
                 var db_password = (data[0].password)
+                console.log(db_password)
                 var password = req.body.password
+                console.log(await bcrypt.compare(password, db_password))
                 var if_password_valid = await bcrypt.compare(password, db_password)
                 if(if_password_valid) {
-                    res.status(200).send({"message":"Successfully logged in"})
+                    // req.session({"user_name": req.body.username})
+                    var payload = {"username":req.body.username, "iat": Date.now()}
+                    var secret = config.get('token_secret')
+                    var token = jwt.sign(payload, secret)
+                    console.log("token"+token.toString())
+                    res.set("token", token)
+                    res.send({"message":"Successfully logged in"})
                 } else {
                     res.status(400).send({"message":"Incorrect Password"})
                 }
-
         }).catch((e)=>{
             res.status(422).send({"error": e})
         })
