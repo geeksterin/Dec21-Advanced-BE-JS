@@ -1,0 +1,91 @@
+Swiggy notifications server ()
+
+client1+client2
+E = eventEmitter
+Clients ->[deviceId, network…]
+
+E.on(‘’newDevice”,()=>{
+	registerClient()
+})
+
+E.on(“networkOn”, ()=>{
+	sendOffer()
+})
+
+
+Wssp -> [12:01->,12:02]
+e.on(‘’)
+
+Pagination
+
+Server to server
+<iot device> -> action
+
+
+User1 -> chat()
+
+<admin server> <authentication> <customer server>
+
+/connectToCustomer -> findSupportAgent() -> support3 -> (event Call)
+												<- connected to Ramesh
+findSupportAgent()=>{
+available_support = “support3”
+e.emit(‘reqToConnect’, [user1, support3] =>{
+	createRoom()
+//room1 - {ids : [user1, support3]}
+})
+}
+
+
+e.on(‘sendMessage’, data,[userId, support3], room=>{
+	room1.emit(‘’data)
+})
+
+
+
+[user1, user2, user3]
+[support1-3, support2-4, support3-1]
+
+Project Ideas - 
+ - book my show
+ - ecommerce -> (customer)
+ - cab booking
+ - doctor appointment(patient + doctor)
+ - video calling +chatting
+ 
+
+
+Topics
+- Express
+- Mysql +/ mongo
+- Authentication (bcrypt for password, bcrypt )
+- Authorisation
+- Project structure
+- Static file(images or if UI) -optional
+- Middleware
+- Routers
+- Jwt token
+- Joi validations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
