@@ -1,0 +1,91 @@
+No sql vs sql db
+
+Non-structural  n structural
+File based            n RDBMS
+Update whole    n update one by default
+BASE                       n ATOM
+database				n database
+Collection            n table
+Document            n row
+Field                        n column/attribute
+Value                      n data
+Create organisation -> create cluster ->
+
+Mongodb, aerospike, cassandra,
+Indexing ->
+
+Table -rows -> fetching
+Students - id (primary key)-char & secondary key-email U, phone U, classId fk
+Students -> [(1, Ali, C1),(2, Kanishka, C1),(3, kanika, C1),((4, Dev, C1))], class index
+ - Select * from students where name=‘’Kanika” ; iteratively check and then do string matching
+ - select * from students where className=“C1”;
+Iterate to all
+
+C1 -> [(1, Ali, C1),(2, Kanishka, C1),(3, kanika, C1),(4, Dev, C1),(5, kanika, C1)]
+C2 -> [(1, kanika, C1),]
+Insert +fetch query result 0.0(index+off)
+
+ - Select * from students where id=”two”;
+
+1, row1
+2, row2
+
+Two two
+05022022student001 t1r1
+05022022student002 t1r2
+05022022student003
+
+
+0-100 0-20 0-10 []
+
+Mongodb
+
+- Document format (javascript object) for data(bson)
+- Schema less 
+- Highly scalable - vertical (customer, seller, delivery) and horizontal (add more data attributes/columns)
+Gps tracker - device, lat, long, -> 5sec
+Gps tracker - device, lat, long, fuel, b-> 15 sec
+Gps tracker - device, lat, long, 
+deviceId, pos, extra_payload
+{
+“c1”:{“class”:1, “subject”:2}
+}
+
+“A,b,c\n
+1,2,9”
+
+
+{"_id":{"$oid":"61fe14cde384eb5dde5076a8"}}
+
+ObjectId("61fe21beb4e9b6ad3f432e42")
+
+61fe21beb4e9b6ad3f432e42. - 12 bytes 
+
+4 bytes - timestamp ->
+3 bytes - m/c id
+3 bytes -process id 
+2 incremental
+
+db.studentsCollection.update({name:”Dev”},{name: “Dev1”, created_at: new Date(), marks: [ 98, 87, 76, 55 ]})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
