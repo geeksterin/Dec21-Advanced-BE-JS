@@ -1,6 +1,6 @@
 global.express = require('express')
 global.joi = require('joi')
-
+process.env.NODE_ENV = 'dev';
 var app = express()
 var product = require('./routers/product')
 var userRoutes = require('./routers/user')
@@ -10,11 +10,15 @@ var cookieParser = require('cookie-parser')
 global.config = require('config')
 global.jwt = require('jsonwebtoken')
 require('./db')
+require('./mongodb')
 
 app.use(express.json())
+app.use((req, res, next)=>{
+    console.log(req.url)
+    var url = req.url
+    next()
+})
 
-$port = process.env.port
-$host = process.env.host
 // secret
 // ->login ->
 // /req-> session
@@ -57,8 +61,8 @@ app.use('/products', product)
 app.listen(3001, () => {
     // console.log(process.env)
     // console.log(process.env)
-    console.log(config.get('host'))
     console.log("Listening to http://127.0.0.1:3001")
+    // console.log(config)
 })
 
 // connection.end()

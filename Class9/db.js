@@ -4,7 +4,7 @@ var db_params = {
     user: 'root',
     password: 'password',
     host: 'localhost',
-    // port: 3306,
+    port: 3306,
     database: 'geeekster'
 }
 global.connection =mysql.createPool(db_params).promise()

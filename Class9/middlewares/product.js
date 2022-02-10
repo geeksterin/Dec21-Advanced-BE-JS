@@ -1,25 +1,25 @@
 var product_schema = require('./../models/product')
 var userService = require('./../services/user')
-function validateUser(req, res, next) {
+
+function authorizeJWT(req, res, next) {
     console.log("validating")
     var token = req.headers['authorization'].split('Bearer ')[1]
+    if (token == null) return res.sendStatus(401)
+    console.log("ts"+config.get('token_secret'))
 
-    try {
-        var res = jwt.verify(token, config.get('token_secret'))
-        console.log(res)
+    jwt.verify(token, config.get('token_secret'), (err, payload) => {
+        console.log(err)
+        if (err) return res.status(403).send({"error":"token is invalid."})
+        req.user = payload
         next()
-    } catch(e) {
-        console.log("??"+e)
-        return {"error":e}
-    }
+    })
 }
 
-module.exports = async (req, res, next) => {
-    console.log("Inside middleware")
-    var res = validateUser(req, res, next)
-    if (res && res.hasOwnProperty('error')) {
-        res.status(400).send({"error":res.error})
-    }
+function validateSchema(req,res,next) {
+    console.log(req)
+    // if (res && res.hasOwnProperty('error')) {
+    //     res.status(400).send({"error":res.error})
+    // }
     var if_validate = product_schema.validate(req.body)
     console.log("ifv"+if_validate)
     if (if_validate.error) {
@@ -29,4 +29,10 @@ module.exports = async (req, res, next) => {
         console.log("validated using joi" + if_validate.value)
         next()
     }
+}
+
+
+module.exports = {
+    authorizeJWT: authorizeJWT,
+    validateSchema: validateSchema,
 }

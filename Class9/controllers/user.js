@@ -32,7 +32,7 @@ module.exports = {
                     var token = jwt.sign(payload, secret)
                     console.log("token"+token.toString())
                     res.set("token", token)
-                    res.send({"message":"Successfully logged in"})
+                    res.status(200).send({"message":"Successfully logged in"})
                 } else {
                     res.status(400).send({"message":"Incorrect Password"})
                 }
